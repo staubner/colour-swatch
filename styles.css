@@ -1,0 +1,51 @@
+/* Main Styles */
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  background-color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.bar {
+  height: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: none;
+}
+
+#container {
+  display: flex;
+  align-items: flex-start;
+}
+
+#colour-box  {
+  width: 80%;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+[id="1"] {
+  background-color: #fff;
+}
+ 
+[id="2"] {
+  background-color: #fff;
+}
+
+[id="3"] {
+  background-color: #fff;
+}
+
+[id="4"] {
+  background-color: #fff;
+}
+
+[id="5"] {
+  background-color: #fff;
+}

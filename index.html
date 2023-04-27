@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Coloured Bars</title>
+  <meta name="description" content="Page Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script type="module" src="./script.js"></script>
+
+</head>
+
+<body>
+  <!-- Content goes here -->
+  <h1 id="header">Enter Colour Values</h1>
+  <div id="container">
+    <div id="form-container">
+      <form id="form">
+        <label for="colour1">Colour 1: </label>
+        <input type="text" name="colour1" id="colour1" placeholder="hex value" maxlength="6">
+        <br>
+        <label for="colour2">Colour 2: </label>
+        <input type="text" name="colour2" id="colour2" placeholder="hex value" maxlength="6">
+        <br>
+        <label for="colour3">Colour 3: </label>
+        <input type="text" name="colour3" id="colour3" placeholder="hex value" maxlength="6">
+        <br>
+        <label for="colour4">Colour 4: </label>
+        <input type="text" name="colour4" id="colour4" placeholder="hex value" maxlength="6">
+        <br>
+        <label for="colour5">Colour 5: </label>
+        <input type="text" name="colour5" id="colour5" placeholder="hex value" maxlength="6">
+        <br>
+        <input type="submit" class="submit" name="submit">
+      </form>
+      <br>
+      <input type="button" value="Reset" id="reset">
+    </div>
+
+
+    <div id="colour-box">
+      <div class="bar" id="1"></div>
+
+
+      <div class="bar" id="2"></div>
+
+
+      <div class="bar" id="3"></div>
+
+
+      <div class="bar" id="4"></div>
+
+
+      <div class="bar" id="5"></div>
+    </div>
+  </div>
+</body>
+
+</html>
