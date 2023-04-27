@@ -2,6 +2,7 @@ const form = document.getElementById('form');
 const resetbtn = document.getElementById('reset')
 
 form.addEventListener('submit', (event) => {
+    //handle event and extract values
     event.preventDefault();
 
     const submittedArray = [];
@@ -16,11 +17,15 @@ form.addEventListener('submit', (event) => {
         return (colour.length <= 6 && hexRegEx.test(colour));
     })
 
+    //handle hex values into swatches
     for (let i = 0; i < colourArray.length; i++) {
         let hex = colourArray[i];
 
         if (hex.length === 3) {
-            hex = hex + hex;
+            const hex1 = hex[0];
+            const hex2 = hex[1];
+            const hex3 = hex[2];
+            hex = hex1 + hex1 + hex2 + hex2 + hex3 + hex3
         }
 
         const hexToDecimal = parseInt(hex, 16);
@@ -37,10 +42,11 @@ form.addEventListener('submit', (event) => {
 
         div.style.backgroundColor = `#${hex}`
 
-        div.innerText = `#${hex}`;
+        div.innerText = `Colour ${divId}: #${hex}`;
     }
 })
 
+//reset page
 resetbtn.addEventListener('click', () => {
     window.location.reload();
 })
