@@ -37,7 +37,7 @@ form.addEventListener('submit', (event) => {
 
         div.style.backgroundColor = `#${hex}`
 
-        div.innerText = `#${colourArray[i]}`;
+        div.innerText = `#${hex}`;
     }
 })
 
