@@ -42,7 +42,7 @@ form.addEventListener('submit', (event) => {
 
         div.style.backgroundColor = `#${hex}`
 
-        div.innerText = `Colour ${divId}: #${hex}`;
+        div.innerText = `Colour ${divId}: #${hex.toUpperCase()}`;
     }
 })
 
