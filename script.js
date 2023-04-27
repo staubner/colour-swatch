@@ -32,7 +32,7 @@ form.addEventListener('submit', (event) => {
         const divId = i + 1;
         const div = document.getElementById(`${divId}`)
 
-        if ((hexToDecimal) <= 8388608) {
+        if (hexToDecimal <= 10000000) {
             div.style.color = 'white';
         } else {
             div.style.color = 'black';
