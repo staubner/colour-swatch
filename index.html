@@ -3,41 +3,57 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Coloured Bars</title>
+  <title>Colour Swatches</title>
   <meta name="description" content="Page Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Link to external CSS file -->
   <link rel="stylesheet" type="text/css" href="./styles.css">
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./src/hex.js"></script>
+  <script type="module" src="./src/script.js"></script>
+  <script type="module" src="./src/rgb.js"></script>
 
 </head>
 
 <body>
   <!-- Content goes here -->
+
+
   <h1 id="header">Enter Colour Values</h1>
+  <h3 id="sub-header">Only valid values will generate a colour. Please separate RGB and HSL values with commas.</h3>
   <div id="container">
-    <div id="form-container">
-      <form id="form">
-        <label for="colour1">Colour 1: </label>
-        <input type="text" name="colour1" id="colour1" placeholder="hex value" maxlength="6">
+
+    <div class="form-container">
+      <form action="" id="unit-select">
+        <label for="unit-select">Select Colour Units</label>
         <br>
-        <label for="colour2">Colour 2: </label>
-        <input type="text" name="colour2" id="colour2" placeholder="hex value" maxlength="6">
+        <select name="unit-select" id="unit-select">
+          <option value="hex">Hex</option>
+          <option value="rgb">RGB</option>
+        </select>
+      </form>
+      <form class="form" id="colour-form">
         <br>
-        <label for="colour3">Colour 3: </label>
-        <input type="text" name="colour3" id="colour3" placeholder="hex value" maxlength="6">
+        <label for="colour1">Colour 1:</label>
         <br>
-        <label for="colour4">Colour 4: </label>
-        <input type="text" name="colour4" id="colour4" placeholder="hex value" maxlength="6">
+        <input type="text" name="colour1" id="colour1" placeholder="colour value" maxlength="12">
+        <br><br>
+        <label for="colour2">Colour 2:</label>
+        <input type="text" name="colour2" id="colour2" placeholder="colour value" maxlength="12">
+        <br><br>
+        <label for="colour3">Colour 3:</label>
+        <input type="text" name="colour3" id="colour3" placeholder="colour value" maxlength="12">
+        <br><br>
+        <label for="colour4">Colour 4:</label>
+        <input type="text" name="colour4" id="colour4" placeholder="colour value" maxlength="12">
+        <br><br>
+        <label for="colour5">Colour 5:</label>
+        <input type="text" name="colour5" id="colour5" placeholder="colour value" maxlength="12">
         <br>
-        <label for="colour5">Colour 5: </label>
-        <input type="text" name="colour5" id="colour5" placeholder="hex value" maxlength="6">
         <br>
         <input type="submit" class="submit" name="submit">
       </form>
-      <br>
-      <input type="button" value="Reset" id="reset">
+
     </div>
 
 
@@ -57,6 +73,8 @@
       <div class="bar" id="5"></div>
     </div>
   </div>
+
+  <p id="reset-container"><input type="button" value="Reset" id="reset"></p>
 </body>
 
 </html>

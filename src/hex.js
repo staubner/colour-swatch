@@ -1,9 +1,10 @@
-const form = document.getElementById('form');
-const resetbtn = document.getElementById('reset')
-
-form.addEventListener('submit', (event) => {
-    //handle event and extract values
-    event.preventDefault();
+export function generateHex(event) {
+    //reset swatch display in case of value deletion
+    for (let i = 0; i < 5; i++) {
+        const divId = i + 1;
+        const div = document.getElementById(`${divId}`);
+        div.style.display = 'none';
+    }
 
     const submittedArray = [];
 
@@ -11,15 +12,15 @@ form.addEventListener('submit', (event) => {
         submittedArray.push(event.target[i].value)
     }
 
-    const colourArray = submittedArray.filter((colour) => {
+    const hexArray = submittedArray.filter((colour) => {
         const hexRegEx = /^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
 
         return (colour.length <= 6 && hexRegEx.test(colour));
     })
 
     //handle hex values into swatches
-    for (let i = 0; i < colourArray.length; i++) {
-        let hex = colourArray[i];
+    for (let i = 0; i < hexArray.length; i++) {
+        let hex = hexArray[i];
 
         if (hex.length === 3) {
             const hex1 = hex[0];
@@ -44,9 +45,4 @@ form.addEventListener('submit', (event) => {
 
         div.innerText = `Colour ${divId}: #${hex.toUpperCase()}`;
     }
-})
-
-//reset page
-resetbtn.addEventListener('click', () => {
-    window.location.reload();
-})
+}

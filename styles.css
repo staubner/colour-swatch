@@ -1,6 +1,7 @@
 /* Main Styles */
 body {
   margin: 0 auto;
+  padding: 0 10px;
   max-width: 1000px;
   background-color: #ecf0f1;
   font-family: 'Open Sans', sans-serif;
@@ -19,7 +20,7 @@ body {
   align-items: flex-start;
 }
 
-#colour-box  {
+#colour-box {
   width: 80%;
 }
 
@@ -30,10 +31,28 @@ body {
   width: 100%;
 }
 
+.form-container {
+  width: 20%;
+}
+
+#select-form {
+  width: 100%;
+}
+
+#reset-container {
+  text-align: center;
+}
+
+#reset {
+  width: 50%;
+  height: 40px;
+  font-size: 2rem;
+}
+
 [id="1"] {
   background-color: #fff;
 }
- 
+
 [id="2"] {
   background-color: #fff;
 }
