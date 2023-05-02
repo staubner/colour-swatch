@@ -18,8 +18,6 @@ export function generateRGB(event) {
         return rgbRegEx.test(colour);
     })
 
-    console.log(rgbArray)
-
     for (let i = 0; i < rgbArray.length; i++) {
         const rgb = rgbArray[i];
         const divId = i + 1;
@@ -27,7 +25,6 @@ export function generateRGB(event) {
 
         const rgbToArray = rgb.split('');
         const rgbNumOnly = rgbToArray.filter(num => num !== ",");
-        console.log(rgbNumOnly)
         let rgbTotal = 0;
 
         for (let j = 0; j < rgbNumOnly.length; j++) {
