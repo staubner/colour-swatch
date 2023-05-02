@@ -18,15 +18,33 @@ export function generateRGB(event) {
         return rgbRegEx.test(colour);
     })
 
+    console.log(rgbArray)
+
     for (let i = 0; i < rgbArray.length; i++) {
-        let rgb = rgbArray[i];
+        const rgb = rgbArray[i];
         const divId = i + 1;
         const div = document.getElementById(`${divId}`);
+
+        const rgbToArray = rgb.split('');
+        const rgbNumOnly = rgbToArray.filter(num => num !== ",");
+        console.log(rgbNumOnly)
+        let rgbTotal = 0;
+
+        for (let j = 0; j < rgbNumOnly.length; j++) {
+            const strToNum = Number(rgbNumOnly[j])
+            rgbTotal += strToNum;
+        }
+
+        if (rgbTotal <= 20) {
+            div.style.color = 'white';
+        } else {
+            div.style.color = 'black';
+        }
 
         div.style.display = 'block';
 
         div.style.backgroundColor = `rgb(${rgb})`
 
         div.innerText = `Colour ${divId}: RGB ${rgb}`;
-    }    
+    }
 };
