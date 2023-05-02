@@ -24,6 +24,7 @@ unitSelect.addEventListener('change', (event) => {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
+    // add new colour type functions here
     if (colourType === 'hex') {
         generateHex(event);
     } else if (colourType === 'rgb') {
