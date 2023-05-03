@@ -33,7 +33,7 @@ export function generateHex(event) {
         const divId = i + 1;
         const div = document.getElementById(`${divId}`)
 
-        if (hexToDecimal <= 10000000) {
+        if (hexToDecimal <= 8500000) {
             div.style.color = 'white';
         } else {
             div.style.color = 'black';

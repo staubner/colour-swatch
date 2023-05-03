@@ -23,16 +23,23 @@ export function generateRGB(event) {
         const divId = i + 1;
         const div = document.getElementById(`${divId}`);
 
-        const rgbToArray = rgb.split('');
-        const rgbNumOnly = rgbToArray.filter(num => num !== ",");
-        let rgbTotal = 0;
+        // test RGB value to determine text colour
+        const rgbToArray = rgb.split(',');
+        const rgbToNums = rgbToArray.map((value) => {
+            let num = Number(value);
+            if (num === 0) {
+                num += 1
+            };
+            return num;
+        });
 
-        for (let j = 0; j < rgbNumOnly.length; j++) {
-            const strToNum = Number(rgbNumOnly[j])
-            rgbTotal += strToNum;
+        let rgbTotal = 1;
+
+        for (let j = 0; j < rgbToNums.length; j++) {
+            rgbTotal *= rgbToNums[j];
         }
 
-        if (rgbTotal <= 20) {
+        if (rgbTotal <= 8500000) {
             div.style.color = 'white';
         } else {
             div.style.color = 'black';
