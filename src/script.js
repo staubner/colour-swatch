@@ -1,5 +1,6 @@
 import { generateHex } from './hex.js';
 import { generateRGB } from './rgb.js';
+import { generateRGBA } from './rgba.js';
 
 //reset page
 const resetbtn = document.getElementById('reset')
@@ -29,5 +30,7 @@ form.addEventListener('submit', (event) => {
         generateHex(event);
     } else if (colourType === 'rgb') {
         generateRGB(event);
-    };
+    } else if (colourType === 'rgba') {
+        generateRGBA(event);
+    }
 })
