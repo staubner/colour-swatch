@@ -16,7 +16,6 @@ export function generateRGBA(event) {
     const rgbaArray = submittedArray.filter((colour) => {
         const rgbRegEx = /^(\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*(\d*(?:\.\d+)?)$/
 
-
         return rgbRegEx.test(colour);
     })
 
@@ -54,7 +53,7 @@ export function generateRGBA(event) {
 
         div.style.display = 'block';
 
-        div.style.backgroundColor = `rgb(${rgb})`
+        div.style.backgroundColor = `rgba(${rgb})`
 
         div.innerText = `Colour ${divId}: RGBA ${rgb}`;
     }
