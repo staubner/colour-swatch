@@ -56,6 +56,6 @@ export function generateRGBA(event) {
 
         div.style.backgroundColor = `rgb(${rgb})`
 
-        div.innerText = `Colour ${divId}: RGB ${rgb}`;
+        div.innerText = `Colour ${divId}: RGBA ${rgb}`;
     }
 };
